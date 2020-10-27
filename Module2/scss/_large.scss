@@ -1,0 +1,21 @@
+
+    .full-width-footer {
+        background-color: $primaryColor;
+    }
+
+    .full-width-nav {
+        background-color: #111;
+    }
+
+    header, nav, main, footer {
+        max-width: 1200px;
+        margin: auto;
+    }
+    
+    nav ul {padding-left: $gutter;}
+    nav li {width:auto;}
+    nav a {padding: .5rem 1rem;}
+    
+    main figure { width: 33%;}
+    
+    div.news {column-count: 3;}
