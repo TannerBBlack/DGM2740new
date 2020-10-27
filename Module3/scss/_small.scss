@@ -8,21 +8,23 @@ html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
 /*----------- BODY --------------*/
 body {
     font-size: 16px;
-    font-family: Verdana, sans-serif;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
 }
 
 
 /*----------- HEADER --------------*/
 header {
     padding: .5rem 2%;
-    background-color: #ddd;
+    display: grid;
+    grid-template-columns: 105px auto;
 }
-header h1 {margin: 0;}
+header h1 {margin: 0; margin-top: 1.2rem;}
 header h2 {margin: 0; font-weight: normal;}
 
 /*----------- NAVIGATION --------------*/
 nav {
-    background-color: #666;
+    background-color: $menuColor;
 }
 nav ul {
     list-style-type: none;
@@ -35,7 +37,7 @@ nav ul li {
 }
 nav ul li a {
     display: block;
-    background-color: #444;
+    background-color: darken($menuColor, 10%);
     color: #eee;
     border-left: 1px solid #777;
     padding: .5rem 0;
@@ -46,11 +48,11 @@ nav ul li a {
 nav ul li:first-child a {border-left: none;}
 
 nav ul li a:hover {
-    background-color: #eee;
+    background-color: lighten($menuColor, 15%);
     color: #333;
 }
 nav ul li.active a {
-    background-color: #000;
+    background-color: darken($menuColor, 20%);
     color: #fff;
 }
 /*----------- MAIN --------------*/
@@ -59,10 +61,26 @@ main {
     min-height: 10rem;
 }
 
+div.fruitGallery {
+    display: flex;
+    flex-wrap: wrap;
+}
+div.fruitGallery figure {
+    flex-basis: 46%;
+    margin: 1rem 2%;
+}
+
+div.fruitGallery figure img {
+    width: 100%;
+}
+
+div.fruitGallery figcaption {
+    text-align: center;
+}
 
 /*----------- FOOTER --------------*/
 footer {
-    background-color: #ddd;
+    background-color: $menuColor;
     padding: .5rem 2%;
     text-align: center;
 }

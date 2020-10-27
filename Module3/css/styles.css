@@ -317,15 +317,18 @@ html {
 /*----------- BODY --------------*/
 body {
   font-size: 16px;
-  font-family: Verdana, sans-serif; }
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300; }
 
 /*----------- HEADER --------------*/
 header {
   padding: .5rem 2%;
-  background-color: #ddd; }
+  display: grid;
+  grid-template-columns: 105px auto; }
 
 header h1 {
-  margin: 0; }
+  margin: 0;
+  margin-top: 1.2rem; }
 
 header h2 {
   margin: 0;
@@ -333,7 +336,7 @@ header h2 {
 
 /*----------- NAVIGATION --------------*/
 nav {
-  background-color: #666; }
+  background-color: red; }
 
 nav ul {
   list-style-type: none;
@@ -346,7 +349,7 @@ nav ul li {
 
 nav ul li a {
   display: block;
-  background-color: #444;
+  background-color: #cc0000;
   color: #eee;
   border-left: 1px solid #777;
   padding: .5rem 0;
@@ -358,11 +361,11 @@ nav ul li:first-child a {
   border-left: none; }
 
 nav ul li a:hover {
-  background-color: #eee;
+  background-color: #ff4d4d;
   color: #333; }
 
 nav ul li.active a {
-  background-color: #000;
+  background-color: #990000;
   color: #fff; }
 
 /*----------- MAIN --------------*/
@@ -370,9 +373,23 @@ main {
   padding: 0 2%;
   min-height: 10rem; }
 
+div.fruitGallery {
+  display: flex;
+  flex-wrap: wrap; }
+
+div.fruitGallery figure {
+  flex-basis: 46%;
+  margin: 1rem 2%; }
+
+div.fruitGallery figure img {
+  width: 100%; }
+
+div.fruitGallery figcaption {
+  text-align: center; }
+
 /*----------- FOOTER --------------*/
 footer {
-  background-color: #ddd;
+  background-color: red;
   padding: .5rem 2%;
   text-align: center; }
 
@@ -385,6 +402,9 @@ footer {
 @media only screen and (min-width: 35rem) {
   /*----------- BODY --------------*/
   /*----------- HEADER --------------*/
+  header h1 {
+    font-size: 3rem; }
+
   /*----------- NAVIGATION --------------*/
   nav ul {
     margin-left: 2%; }
@@ -402,16 +422,22 @@ footer {
     padding: .5rem 1rem; }
 
   /*----------- MAIN --------------*/
+  div.fruitGallery figure {
+    flex-basis: 29%; }
+
   /*----------- FOOTER --------------*/ }
 /* end of media query */
 @media only screen and (min-width: 64rem) {
   header, nav, main, footer {
-    max-width: 64rem;
+    max-width: 71.25rem;
     margin: auto; }
 
   /*----------- BODY --------------*/
   /*----------- HEADER --------------*/
   /*----------- NAVIGATION --------------*/
   /*----------- MAIN --------------*/
+  div.fruitGallery figure {
+    flex-basis: 21%; }
+
   /*----------- FOOTER --------------*/ }
 /* end of media query */

@@ -7,6 +7,7 @@
 
 /*----------- HEADER --------------*/
 
+header h1 {font-size: 3rem;}
 
 
 /*----------- NAVIGATION --------------*/
@@ -19,6 +20,9 @@
 
 /*----------- MAIN --------------*/
 
+div.fruitGallery figure {
+    flex-basis: 29%;
+}
 
 
 /*----------- FOOTER --------------*/
