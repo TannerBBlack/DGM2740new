@@ -13,16 +13,20 @@ body {
 
 
 /*----------- HEADER --------------*/
+
 header {
     padding: .5rem 2%;
-    background-color: #ddd;
+    background-image: url(/images/smallparkheader.jpg);
 }
 header h1 {margin: 0;}
 header h2 {margin: 0; font-weight: normal;}
 
 /*----------- NAVIGATION --------------*/
+div#navWrapper {
+    background-color: $mainColor;
+}
 nav {
-    background-color: #666;
+    background-color: $mainColor;
 }
 nav ul {
     list-style-type: none;
@@ -35,7 +39,7 @@ nav ul li {
 }
 nav ul li a {
     display: block;
-    background-color: #444;
+    background-color: darken($mainColor, 10%);
     color: #eee;
     border-left: 1px solid #777;
     padding: .5rem 0;
@@ -46,11 +50,11 @@ nav ul li a {
 nav ul li:first-child a {border-left: none;}
 
 nav ul li a:hover {
-    background-color: #eee;
+    background-color: lighten($mainColor, 15%);
     color: #333;
 }
 nav ul li.active a {
-    background-color: #000;
+    background-color: darken($mainColor, 20%);
     color: #fff;
 }
 /*----------- MAIN --------------*/
@@ -59,10 +63,33 @@ main {
     min-height: 10rem;
 }
 
+div.bearAnimation {
+    position: relative;
+    animation: mymoves 5s 1;
+    
+}
+
+@keyframes mymoves {
+    from {left: 0px;}
+    to {left: 200px;}
+  }
+
+
+figure img {width: 100%;}
+figure{
+   margin: 0;
+   width: 100%;
+   
+}
+figcaption {text-align: center; font-size: .8rem;}
 
 /*----------- FOOTER --------------*/
+div#footerWrapper {
+    background-color: $mainColor;
+}
+
 footer {
-    background-color: #ddd;
+    background-color: $mainColor;
     padding: .5rem 2%;
     text-align: center;
 }

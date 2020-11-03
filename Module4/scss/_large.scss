@@ -1,5 +1,5 @@
 header, nav, main, footer {
-        max-width: 64rem;
+        max-width: 60rem;
         margin:auto;
 }
 
@@ -9,7 +9,10 @@ header, nav, main, footer {
 
 /*----------- HEADER --------------*/
 
-
+div#headerWrapper {
+        background-image: url(/images/headerRepeat.png);
+        background-repeat: repeat;
+}
 
 /*----------- NAVIGATION --------------*/
 
@@ -17,7 +20,7 @@ header, nav, main, footer {
 
 /*----------- MAIN --------------*/
 
-
+main figure { width: 33%;}
 
 /*----------- FOOTER --------------*/
     

@@ -6,7 +6,9 @@
 
 
 /*----------- HEADER --------------*/
-
+header {
+    background-image: url(/images/mediumparkheader.jpg);
+}
 
 
 /*----------- NAVIGATION --------------*/
@@ -19,7 +21,12 @@
 
 /*----------- MAIN --------------*/
 
-
+main figure {
+    float: right; 
+    width: 33%; 
+    margin-left: $gutter;
+    padding-bottom: .5rem;
+}
 
 /*----------- FOOTER --------------*/
     

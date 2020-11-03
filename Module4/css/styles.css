@@ -322,7 +322,7 @@ body {
 /*----------- HEADER --------------*/
 header {
   padding: .5rem 2%;
-  background-color: #ddd; }
+  background-image: url(/images/smallparkheader.jpg); }
 
 header h1 {
   margin: 0; }
@@ -332,8 +332,11 @@ header h2 {
   font-weight: normal; }
 
 /*----------- NAVIGATION --------------*/
+div#navWrapper {
+  background-color: red; }
+
 nav {
-  background-color: #666; }
+  background-color: red; }
 
 nav ul {
   list-style-type: none;
@@ -346,7 +349,7 @@ nav ul li {
 
 nav ul li a {
   display: block;
-  background-color: #444;
+  background-color: #cc0000;
   color: #eee;
   border-left: 1px solid #777;
   padding: .5rem 0;
@@ -358,11 +361,11 @@ nav ul li:first-child a {
   border-left: none; }
 
 nav ul li a:hover {
-  background-color: #eee;
+  background-color: #ff4d4d;
   color: #333; }
 
 nav ul li.active a {
-  background-color: #000;
+  background-color: #990000;
   color: #fff; }
 
 /*----------- MAIN --------------*/
@@ -370,9 +373,32 @@ main {
   padding: 0 2%;
   min-height: 10rem; }
 
+div.bearAnimation {
+  position: relative;
+  animation: mymoves 5s 1; }
+
+@keyframes mymoves {
+  from {
+    left: 0px; }
+  to {
+    left: 200px; } }
+figure img {
+  width: 100%; }
+
+figure {
+  margin: 0;
+  width: 100%; }
+
+figcaption {
+  text-align: center;
+  font-size: .8rem; }
+
 /*----------- FOOTER --------------*/
+div#footerWrapper {
+  background-color: red; }
+
 footer {
-  background-color: #ddd;
+  background-color: red;
   padding: .5rem 2%;
   text-align: center; }
 
@@ -385,6 +411,9 @@ footer {
 @media only screen and (min-width: 35rem) {
   /*----------- BODY --------------*/
   /*----------- HEADER --------------*/
+  header {
+    background-image: url(/images/mediumparkheader.jpg); }
+
   /*----------- NAVIGATION --------------*/
   nav ul {
     margin-left: 2%; }
@@ -402,16 +431,29 @@ footer {
     padding: .5rem 1rem; }
 
   /*----------- MAIN --------------*/
+  main figure {
+    float: right;
+    width: 33%;
+    margin-left: 2%;
+    padding-bottom: .5rem; }
+
   /*----------- FOOTER --------------*/ }
 /* end of media query */
 @media only screen and (min-width: 64rem) {
   header, nav, main, footer {
-    max-width: 64rem;
+    max-width: 60rem;
     margin: auto; }
 
   /*----------- BODY --------------*/
   /*----------- HEADER --------------*/
+  div#headerWrapper {
+    background-image: url(/images/headerRepeat.png);
+    background-repeat: repeat; }
+
   /*----------- NAVIGATION --------------*/
   /*----------- MAIN --------------*/
+  main figure {
+    width: 33%; }
+
   /*----------- FOOTER --------------*/ }
 /* end of media query */
