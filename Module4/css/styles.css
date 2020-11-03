@@ -322,7 +322,7 @@ body {
 /*----------- HEADER --------------*/
 header {
   padding: .5rem 2%;
-  background-image: url(/images/smallparkheader.jpg); }
+  background-image: url(/Module4/images/smallparkheader.jpg); }
 
 header h1 {
   margin: 0; }
@@ -412,7 +412,7 @@ footer {
   /*----------- BODY --------------*/
   /*----------- HEADER --------------*/
   header {
-    background-image: url(/images/mediumparkheader.jpg); }
+    background-image: url(/Module4/images/mediumparkheader.jpg); }
 
   /*----------- NAVIGATION --------------*/
   nav ul {
@@ -447,8 +447,11 @@ footer {
   /*----------- BODY --------------*/
   /*----------- HEADER --------------*/
   div#headerWrapper {
-    background-image: url(/images/headerRepeat.png);
+    background-image: url(/Module4/images/headerRepeat.png);
     background-repeat: repeat; }
+
+  header {
+    background-image: url(/Module4/images/headerLarge.jpg); }
 
   /*----------- NAVIGATION --------------*/
   /*----------- MAIN --------------*/
