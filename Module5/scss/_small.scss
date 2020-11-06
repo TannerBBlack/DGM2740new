@@ -31,7 +31,11 @@ header {
     img {
         float: left;
         padding-right: 10px;
-    } // end of img
+    } // end of img6
+    figure.logo {
+        float: left;
+        margin: 0 2% 0 0;
+    }
 } // end of header
 
 nav {background-color: #111;
@@ -51,6 +55,12 @@ nav {background-color: #111;
 main{display: block; padding: 1rem $gutter;
  h1 {color: $primaryColor;
 font-weight: $heavyWeight;
+}
+
+div.hero-image {
+    display: block;
+    width: 96%;
+    margin: 0 2%;
 }
 
 .hero-image img {
