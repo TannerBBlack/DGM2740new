@@ -1,0 +1,12 @@
+
+ 
+ nav li {width: 25%; float: left;}
+    
+    
+main {
+    
+    @for $i from 1 through 12 {
+        $w:($i / 12) * 100%;
+        .medium-#{$i} {flex-basis: $w;}	
+    } // end loop
+}
