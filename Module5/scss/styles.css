@@ -431,9 +431,11 @@ nav {
   background-color: #111; }
   nav ul {
     margin: 0;
-    padding: 0; }
-  nav li {
+    padding: 0;
     list-style-type: none; }
+    nav ul li {
+      width: 25%;
+      float: left; }
   nav li.active {
     background-color: #333; }
   nav a {

@@ -2,16 +2,9 @@
     nav li {width: 25%; float: left;}
     
     
-    main figure {
-        float: right; 
-        width: 50%; 
-        margin-left: $gutter;
-        padding-bottom: .5rem;
-    }
-    
     div.news {
         clear: both;
-        column-count: 2;
+        column-count: 1;
         column-rule: 1px solid #ddd;
     }
     
