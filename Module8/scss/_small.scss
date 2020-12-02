@@ -1,0 +1,79 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+nav button {
+    margin: .2rem 2%;
+    background-color: transparent;
+    border: none;
+    font-size: 1.6rem;
+    color: #555;
+}
+
+nav {
+    background-color: $primaryColor;
+    font-family: Verdana, sans-serif;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li a {
+    display: block;
+    padding: .8rem 2%;
+    text-decoration: none;
+    color: #000;
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+nav ul li.active a{
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #fff;
+}
+
+nav ul li a:hover {background-color: rgba(0, 0, 0, 0.4);}
+
+nav ul.hide {display: none;}
+
+main {
+    font-family: Verdana, sans-serif;
+}
+
+div.storyGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+}
+
+div.storyGrid span {
+    display: block;
+    text-align: center;
+    font-size: .75rem;
+}
+.teaser, .lead {padding: .5rem 2vw;}
+.teaser img, .lead img {width: 100%;}
+.lead {grid-column: 1 / span 2;}
+
+footer {
+    background-color: $primaryColor;
+    text-align: center;
+    font-family: Verdana, sans-serif;
+}
+
+div.footerGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+}
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
