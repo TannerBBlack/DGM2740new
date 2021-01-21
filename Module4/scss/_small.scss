@@ -8,7 +8,8 @@ html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
 /*----------- BODY --------------*/
 body {
     font-size: 16px;
-    font-family: Verdana, sans-serif;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
 }
 
 
@@ -63,25 +64,51 @@ main {
     min-height: 10rem;
 }
 
-div.bearAnimation {
-    position: relative;
-    animation: mymoves 5s 1;
-    
+.cardContainer {
+    display: flex;
+    flex-wrap: wrap;
 }
+
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 10px;
+    max-width: 280px;
+    text-align: center;
+    h2 {border-bottom: 1px solid black;}
+    margin: 2px;
+    padding-bottom: 10px;
+    background-color: rgb(253, 171, 171);
+  }
+  
+  /* On mouse-over, add a deeper shadow */
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    div.bearAnimation {
+        position: relative;
+        animation: mymoves 4s 0.25;
+        
+    }
+  }
+  
+  /* Add some padding inside the card container */
+  .container {
+    padding: 2px 16px;
+  }
+
+  button {
+      border: none;
+      border-radius: 5px;
+      background-color: rgb(214, 110, 110);
+      width: 80%;
+      height: 2rem;
+  }
 
 @keyframes mymoves {
     from {left: 0px;}
     to {left: 200px;}
   }
-
-
-figure img {width: 100%;}
-figure{
-   margin: 0;
-   width: 100%;
-   
-}
-figcaption {text-align: center; font-size: .8rem;}
 
 /*----------- FOOTER --------------*/
 div#footerWrapper {
