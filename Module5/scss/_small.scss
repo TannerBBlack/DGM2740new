@@ -75,13 +75,12 @@ div.hero-image {
   }
 
   picture.founder-image {
-    width: 100%;
     margin: 0;
-    width: 100%;
-    float: right; 
-    width: 50%; 
+    float: right;
+    width: 50%;
     margin-left: $gutter;
-    padding-bottom: .5rem;    
+    padding-bottom: .5rem;
+    img { width: 100%; height: auto;}
 }
  figcaption {text-align: center; font-size: .8rem;}
 } // end of main

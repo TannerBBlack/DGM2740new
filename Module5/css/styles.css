@@ -461,13 +461,14 @@ main {
   main .hero-image img {
     width: 100%; }
   main picture.founder-image {
-    width: 100%;
     margin: 0;
-    width: 100%;
     float: right;
     width: 50%;
     margin-left: 2%;
     padding-bottom: .5rem; }
+    main picture.founder-image img {
+      width: 100%;
+      height: auto; }
   main figcaption {
     text-align: center;
     font-size: .8rem; }
@@ -518,9 +519,6 @@ footer {
 
   nav ul li a {
     padding: .5rem 1rem; }
-
-  picture.founder-image {
-    width: 50%; }
 
   div.news {
     column-count: 1; } }
