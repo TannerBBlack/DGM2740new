@@ -475,6 +475,8 @@ main {
     shape-outside: polygon(50% 0, 100% 100%, 0 100%);
     clip-path: polygon(50% 0, 100% 100%, 0 100%);
     margin: .5rem; }
+  main section {
+    margin-bottom: 10px; }
   main section.thegallery figure {
     width: 100%;
     height: 0;
@@ -493,7 +495,8 @@ main {
 footer {
   background-color: #17a8e4;
   text-align: center;
-  padding: 1rem 2%; }
+  padding: 1rem 2%;
+  margin-top: 30px; }
 
 /*----- Clearfix: Force an Element not to collapse -----*/
 .clearfix:after {
