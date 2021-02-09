@@ -123,7 +123,7 @@ main {
     .action-button {
         background-color: aqua;
         text-align: center;
-        margin: $gutter;
+        margin: $gutter * 2;
     }
 
     .blog-card {
