@@ -411,7 +411,8 @@ body {
 
 header {
   background-color: #17a8e4;
-  padding: 1rem 1vw; }
+  padding: 1rem 0.5vw;
+  /*Resize the wrap to see the search bar change!*/ }
   header h1 {
     margin: 0;
     font-size: 2rem;
@@ -420,12 +421,34 @@ header {
     margin: 0;
     font-size: 1.2rem;
     font-weight: 300; }
-  header img {
-    float: left;
-    padding-right: 10px; }
-  header figure.logo {
-    float: left;
-    margin: 0 2% 0 0; }
+  header .search {
+    width: 100%;
+    position: relative;
+    display: flex; }
+  header .searchTerm {
+    width: 100%;
+    border: 3px solid #00B4CC;
+    border-right: none;
+    padding: 5px;
+    height: 36px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #9DBFAF; }
+  header .searchTerm:focus {
+    color: #00B4CC; }
+  header .searchButton {
+    width: 40px;
+    height: 36px;
+    border: 1px solid #00B4CC;
+    background: #00B4CC;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px; }
+  header .wrap {
+    float: right;
+    width: 30%; }
 
 nav {
   background-color: #111; }
@@ -449,16 +472,15 @@ nav {
     background-color: #444; }
 
 main {
-  display: block;
-  padding: 1rem 1vw; }
-  main h1 {
-    color: #17a8e4;
-    font-weight: 700; }
+  display: block; }
   main div.flexed {
     display: flex;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    padding: 0; }
   main .column {
-    padding: 0 1vw; }
+    padding: 0 0.5vw; }
+  main .small-0 {
+    flex-basis: 0%; }
   main .small-1 {
     flex-basis: 8.3333333333%; }
   main .small-2 {
@@ -485,8 +507,7 @@ main {
     flex-basis: 100%; }
   main .attorney-card {
     background-color: aqua;
-    text-align: center;
-    margin: 1vw; }
+    text-align: center; }
   main figure {
     margin: 0; }
   main button {
@@ -494,24 +515,23 @@ main {
     color: white;
     border: none;
     height: 2rem;
-    margin: 1rem; }
+    margin: 1rem;
+    border-radius: 6px; }
   main .action-button {
     background-color: aqua;
     text-align: center;
-    margin: 1vw; }
+    margin: 0.5vw; }
   main .blog-card {
-    background-color: aqua;
-    margin: 1vw;
-    max-width: 250px; }
-    main .blog-card figure img {
-      max-width: 225px; }
+    background-color: aqua; }
+  main .img-fluid {
+    max-width: 100%;
+    height: auto; }
   main .faq {
-    background-color: aqua;
-    margin: 1vw; }
+    background-color: aqua; }
 
 footer {
   background-color: #17a8e4;
-  padding: 1rem 1vw;
+  padding: 1rem 0.5vw;
   display: flex; }
 
 footer a {
@@ -534,6 +554,8 @@ footer a:hover {
     width: 25%;
     float: left; }
 
+  main .medium-0 {
+    flex-basis: 0%; }
   main .medium-1 {
     flex-basis: 8.3333333333%; }
   main .medium-2 {
@@ -565,7 +587,7 @@ footer a:hover {
     margin: auto; }
 
   nav ul {
-    padding-left: 1vw; }
+    padding-left: 0.5vw; }
 
   nav li {
     width: auto; }
@@ -585,6 +607,8 @@ footer a:hover {
   nav ul li a {
     padding: .5rem 1rem; }
 
+  main .large-0 {
+    flex-basis: 0%; }
   main .large-1 {
     flex-basis: 8.3333333333%; }
   main .large-2 {

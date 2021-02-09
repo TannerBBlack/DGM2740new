@@ -28,13 +28,43 @@ header {
         font-size: 1.2rem; 
         font-weight: $regularWeight;
     } // end of h2
-    img {
-        float: left;
-        padding-right: 10px;
-    } // end of img6
-    figure.logo {
-        float: left;
-        margin: 0 2% 0 0;
+    .search {
+        width: 100%;
+        position: relative;
+        display: flex;
+      }
+      
+      .searchTerm {
+        width: 100%;
+        border: 3px solid #00B4CC;
+        border-right: none;
+        padding: 5px;
+        height: 36px;
+        border-radius: 5px 0 0 5px;
+        outline: none;
+        color: #9DBFAF;
+      }
+      
+      .searchTerm:focus{
+        color: #00B4CC;
+      }
+      
+      .searchButton {
+        width: 40px;
+        height: 36px;
+        border: 1px solid #00B4CC;
+        background: #00B4CC;
+        text-align: center;
+        color: #fff;
+        border-radius: 0 5px 5px 0;
+        cursor: pointer;
+        font-size: 20px;
+      }
+      
+      /*Resize the wrap to see the search bar change!*/
+      .wrap{
+          float: right;
+        width: 30%;
     }
 } // end of header
 
@@ -60,59 +90,55 @@ nav {background-color: #111;
 } // end of nav
 
 main {
-    display: block; 
-    padding: 1rem $gutter;
-    h1 {color: $primaryColor;
-        font-weight: $heavyWeight;
+    display: block;
+
+    //SASS LOOP FOR COLUMNS
+    div.flexed {display: flex; flex-wrap: wrap; padding: 0;}
+
+    .column {padding: 0 $gutter;}
+
+    @for $i from 0 through 12 {
+            $w:($i / 12) * 100%;
+            .small-#{$i} {flex-basis: $w;}	
+    } // end loop
+
+    .attorney-card {
+        background-color: aqua;
+        text-align: center;
     }
 
-//SASS LOOP FOR COLUMNS
-div.flexed {display: flex; flex-wrap: wrap;}
-
-.column {padding: 0 $gutter;}
-
-@for $i from 1 through 12 {
-        $w:($i / 12) * 100%;
-        .small-#{$i} {flex-basis: $w;}	
-} // end loop
-
-.attorney-card {
-    background-color: aqua;
-    text-align: center;
-    margin: $gutter;
-}
-
-figure {
-    margin: 0;
-}
-
-button {
-    background-color: blue;
-    color: white;
-    border: none;
-    height: 2rem;
-    margin: 1rem;
-}
-
-.action-button {
-    background-color: aqua;
-    text-align: center;
-    margin: $gutter;
-}
-
-.blog-card {
-    background-color: aqua;
-    margin: $gutter;
-    max-width: 250px;
-    figure img {
-        max-width: 225px;
+    figure {
+        margin: 0;
     }
-}
 
-.faq {
-    background-color: aqua;
-    margin: $gutter;
-}
+    button {
+        background-color: blue;
+        color: white;
+        border: none;
+        height: 2rem;
+        margin: 1rem;
+        border-radius: 6px;
+    }
+
+    .action-button {
+        background-color: aqua;
+        text-align: center;
+        margin: $gutter;
+    }
+
+    .blog-card {
+        background-color: aqua;
+    }
+
+    .img-fluid {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .faq {
+        background-color: aqua;
+        // margin: $gutter;
+    }
 
 }// end of main
 

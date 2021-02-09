@@ -13,7 +13,7 @@
     nav ul li a{padding: .5rem 1rem;}
 main {
 
-    @for $i from 1 through 12 {
+    @for $i from 0 through 12 {
         $w:($i / 12) * 100%;
         .large-#{$i} {flex-basis: $w;}	
     } // end loop
