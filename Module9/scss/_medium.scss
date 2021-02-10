@@ -15,16 +15,8 @@ nav ul li a {
     padding: .8rem 1rem;
 }
 
-div.storyGrid {
-    grid-template-columns: 1fr 1f 1fr;
-}
-span {font-size: 1rem;}
-.lead {grid-column: 1 / span 3;}
-
-div.footerGrid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
+div.cards {
+    column-count: 2;
 }
 
 } /*end medium */

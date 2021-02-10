@@ -401,6 +401,20 @@ html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
+header {
+  background-image: url(/Module9/images/header.jpg);
+  color: white;
+  font-family: Verdana, sans-serif; }
+  header h1 {
+    margin: 5px;
+    margin-top: 0; }
+  header h2 {
+    margin: 5px;
+    margin-bottom: 0; }
+  header #scrim {
+    background-color: rgba(0, 0, 0, 0.2);
+    height: 100%; }
+
 body {
   margin: auto; }
 
@@ -412,7 +426,7 @@ nav button {
   color: #555; }
 
 nav {
-  background-color: #17a8e4;
+  background-image: linear-gradient(#17a8e4, #a1a1ff);
   font-family: Verdana, sans-serif; }
 
 nav ul {
@@ -440,12 +454,48 @@ nav ul.hide {
 main {
   font-family: Verdana, sans-serif; }
 
-picture {
-  position: relative; }
+div:nth-child(4) {
+  background-image: url(../images/places.jpg);
+  text-align: center;
+  background-repeat: no-repeat; }
 
-picture div {
-  position: absolute;
-  bottom: 0; }
+div:nth-child(4) a {
+  background-color: blue; }
+
+div:nth-child(5) {
+  background-image: url(../images/redline.jpg);
+  text-align: center; }
+
+div:nth-child(5) a {
+  background-color: red; }
+
+div:nth-child(6) {
+  background-image: url(../images/city.jpg);
+  text-align: center;
+  background-repeat: no-repeat; }
+
+div:nth-child(6) a {
+  background-color: green; }
+
+div:nth-child(7) {
+  background-image: url(../images/dining.jpg);
+  text-align: center; }
+
+div:nth-child(7) a {
+  background-color: orchid; }
+
+div a {
+  display: block;
+  width: 100%;
+  height: 256px;
+  text-decoration: none;
+  padding: 10% 2%;
+  transition: all .5s ease-in;
+  color: white; }
+
+div a:hover {
+  background: none;
+  text-shadow: 0 0 4px; }
 
 footer {
   background-color: #17a8e4;
@@ -679,19 +729,8 @@ footer {
     border-right: 1px solid rgba(0, 0, 0, 0.3);
     padding: .8rem 1rem; }
 
-  div.storyGrid {
-    grid-template-columns: 1fr 1f 1fr; }
-
-  span {
-    font-size: 1rem; }
-
-  .lead {
-    grid-column: 1 / span 3; }
-
-  div.footerGrid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto; } }
+  div.cards {
+    column-count: 2; } }
 @media only screen and (min-width: 560px) {
   /*end medium */ }
 /* end of media query */
@@ -705,7 +744,10 @@ footer {
     padding: .6rem 1rem; }
 
   main {
-    margin: auto; } }
+    margin: auto; }
+
+  div.cards {
+    column-count: 4; } }
 @media only screen and (min-width: 1028px) {
   /*end large */ }
 /* end of media query */

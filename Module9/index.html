@@ -6,7 +6,7 @@
 <meta name="author" content="John Doe">
 
 <!-- This start file was build by Paul Cheney  -->
-<title>News</title>
+<title>Boston</title>
 
 <!-- TELLS PHONES NOT TO LIE ABOUT THEIR WIDTH & stops the font from enlarging when a phone is turned sideways-->
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -16,6 +16,8 @@
 
 <!-- STYLE SHEETS -->
 <link href="/Module9/css/styles.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 
 
      
@@ -23,8 +25,10 @@
 <body>
 <!-- HEADER HERE -->
 	<header>
-        <h1>Boston City</h1>
-        <h2>Where History Comes Alive</h2>
+        <div id="scrim">
+            <h1>Boston City</h1>
+            <h2>Where History Comes Alive</h2>
+        </div>
     </header>
     
     
@@ -46,12 +50,40 @@
     <main>
         
         <!-- RESPONSIVE SLIDER WITH TWO IMAGES AND TEXT -->
-        <div class="my_slider">
+        <div class="your-class">
+            <picture><source media="(max-width: 560px" srcset="../Module9/images/smallslider1.jpg"><img src="../Module9/images/slider1.jpg"></picture>
+            <picture><source media="(max-width: 560px" srcset="../Module9/images/smallslider2.jpeg"><img src="../Module9/images/slider2.jpeg"></picture>
+            <picture><source media="(max-width: 560px" srcset="../Module9/images/smallslider3.jpg"><img src="../Module9/images/slider3.jpg"></picture>
+            <picture><source media="(max-width: 560px" srcset="../Module9/images/smallslider4.jpg"><img src="../Module9/images/slider4.jpg"></picture>
+        </div>
+        <h2>Plan Your Visit</h2>
+        <div class="cards">
+            <div></div>
+            <div></div>
+            <div></div>
             <div>
-                <img src="/Module9/images/slider3.jpg" alt="">
+                <a href="#">
+                    <img src="/Module9/images/icons8-hotel-star-64.png" alt="building">
+                    <h3>PLACES TO STAY</h3>
+                </a>
             </div>
             <div>
-                <img src="/Module9/images/slider4.jpg" alt="">
+                <a href="#">
+                    <img src="/Module9/images/icons8-train-64.png" alt="train">
+                    <h3>WALK THE RED LINE</h3>
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                    <img src="/Module9/images/icons8-city-64.png" alt="city">
+                    <h3>PASS TO THE CITY</h3>
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                    <img src="/Module9/images/icons8-cutlery-64.png" alt="restaurant">
+                    <h3>FINE DINING</h3>
+                </a>
             </div>
         </div>
 
@@ -63,22 +95,20 @@
     </footer>
     
 <script src="js/scripts.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script type="text/javascripts" src="/Module9/slick/slick.min.js"></script>
+<script type="text/javascript" src="../Module9/slick/slick.min.js"></script>
 
 <script type="text/javascript">
     $(document).ready(function(){
-      $('.my_slider').slick({
-        dots: true,
-        arrows: false,
-        infinite: true,
-        speed: 1000,
-        cssEase: 'ease-out',
-        autoplay: true,
-        autoplaySpeed: 30000
+        $('.your-class').slick({
+          dots: true,
+          arrows: false,
+          autoplay: true,
+        });
       });
-    });
-  </script>
+    </script>
 
 
 </body>
