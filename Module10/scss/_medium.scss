@@ -1,0 +1,57 @@
+/* 35em is also 560px when basefont is 16px */
+@media only screen and (min-width: 35rem) {
+
+    nav {
+        background-color:$menuColor;
+      
+        // new stuff
+        ul {
+            margin-left: 2%;
+            
+        }
+        ul li {float: left; width: auto;}
+        ul li a { 
+            display: block;
+            border:none; // undo small screen
+            width: 100%;
+            background: none;
+            font-size: .9rem;
+            padding: .9rem 1.2rem;
+            color: rgba(255,255,255,1);
+            text-decoration: none;
+            /*transition*/
+            -webkit-transition: background 0.3s linear; 
+            transition: background 0.3s linear;
+        }
+        ul li a:hover {background: darken($menuColor,5%);}
+        
+        #primaryNav li.menu-item-has-children > a:after {
+            font-size: .75rem;
+            content: "\00A0\00A0\25BC";
+            color: rgba(255,255,255,.5);
+        }
+        
+        ul li ul { /*rules for the sub menu items*/
+            z-index:99;
+            position: absolute;
+            background-color: lighten($menuColor, 10%);
+            left: -999rem; /* pushes the menu way off to the side */
+            width: 10rem;
+        }
+         ul li ul li { /* overides the float and line from the parent ul */
+            float: none;
+            border-right: none;
+            border-top: solid 1px rgba(0,0,0,0.2);
+        }
+      
+         ul li:hover ul { /* this displays the menus as drop downs  */
+            left: auto;
+            margin-left: 0;
+        }
+      }
+
+div.cards {
+    column-count: 2;
+}
+
+} /*end medium */

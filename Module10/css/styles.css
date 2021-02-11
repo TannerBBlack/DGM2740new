@@ -1,4 +1,5 @@
-/* normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
+@charset "UTF-8";
+/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
 /**
@@ -400,148 +401,165 @@ html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
-/* body rules */
-html, body {
-  overflow-x: hidden; }
-
-body {
-  font-family: "Quicksand", "sans-serif";
-  font-weight: 300;
-  font-size: 16px; }
-
 header {
-  background-color: #17a8e4;
-  padding: 1rem 0.5vw;
-  /*Resize the wrap to see the search bar change!*/ }
+  background-color: royalblue;
+  color: white;
+  font-family: Verdana, sans-serif; }
   header h1 {
-    margin: 0;
-    font-size: 2rem;
-    font-weight: 700; }
+    margin: 0; }
   header h2 {
     margin: 0;
-    font-size: 1.2rem;
-    font-weight: 300; }
-  header .search {
-    width: 100%;
-    position: relative;
-    display: flex; }
-  header .searchTerm {
-    width: 100%;
-    border: 3px solid #00B4CC;
-    border-right: none;
-    padding: 5px;
-    height: 36px;
-    border-radius: 5px 0 0 5px;
-    outline: none;
-    color: #9DBFAF; }
-  header .searchTerm:focus {
-    color: #00B4CC; }
-  header .searchButton {
-    width: 40px;
-    height: 36px;
-    border: 1px solid #00B4CC;
-    background: #00B4CC;
-    text-align: center;
-    color: #fff;
-    border-radius: 0 5px 5px 0;
-    cursor: pointer;
-    font-size: 20px; }
-  header .wrap {
-    float: right;
-    width: 30%; }
+    margin-top: .6rem; }
+  header #scrim {
+    background-color: rgba(0, 0, 0, 0.2);
+    height: 100%; }
+  header img {
+    float: left;
+    padding-right: 10px; }
+
+body {
+  margin: auto; }
+
+nav button {
+  margin: .2rem 2%;
+  background-color: transparent;
+  border: none;
+  font-size: 1.6rem;
+  color: #555; }
 
 nav {
-  background-color: #111; }
-  nav ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none; }
-    nav ul li {
-      width: 25%;
-      float: left; }
-  nav li.active {
-    background-color: #333; }
-  nav a {
-    display: block;
-    padding: .8rem 0;
-    /*44px min*/
-    color: #eee;
-    text-align: center;
-    text-decoration: none; }
-  nav a:hover {
-    background-color: #444; }
+  background-image: linear-gradient(#17a8e4, #a1a1ff);
+  font-family: Verdana, sans-serif; }
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0; }
+
+nav ul li a {
+  display: block;
+  padding: .8rem 2%;
+  text-decoration: none;
+  color: #000;
+  border-top: 1px solid rgba(0, 0, 0, 0.3); }
+
+nav ul li.active a {
+  background-color: rgba(0, 0, 0, 0.2);
+  color: #fff; }
+
+nav ul li a:hover {
+  background-color: rgba(0, 0, 0, 0.4); }
+
+nav ul.hide {
+  display: none; }
 
 main {
+  font-family: Verdana, sans-serif; }
+
+form fieldset {
+  margin: 2rem 0;
+  border: 1px solid #445ba9;
+  border-radius: 10px;
+  padding: .5rem 2%; }
+
+form legend {
+  color: #445ba9;
+  margin: 0 1rem;
+  padding: 0 .5rem; }
+
+form label.top, form div {
+  display: block;
+  padding-top: 1rem;
+  color: #9c2c13;
+  font-size: .8rem; }
+
+form label.top input, form label.top select {
+  -webkit-appearance: none;
+  display: block;
+  font-size: 1rem;
+  border: solid 1px #999;
+  border-radius: 4px;
+  padding: .75rem;
+  color: #555;
+  width: 100%;
+  max-width: 20rem;
+  background-color: rgba(0, 0, 0, 0.1); }
+
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 1rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+/* Hide the browser's default radio button */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer; }
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%; }
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc; }
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #2196F3; }
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none; }
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
   display: block; }
-  main div.flexed {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0; }
-  main .column {
-    padding: 0 0.5vw; }
-  main .small-0 {
-    flex-basis: 0%; }
-  main .small-1 {
-    flex-basis: 8.3333333333%; }
-  main .small-2 {
-    flex-basis: 16.6666666667%; }
-  main .small-3 {
-    flex-basis: 25%; }
-  main .small-4 {
-    flex-basis: 33.3333333333%; }
-  main .small-5 {
-    flex-basis: 41.6666666667%; }
-  main .small-6 {
-    flex-basis: 50%; }
-  main .small-7 {
-    flex-basis: 58.3333333333%; }
-  main .small-8 {
-    flex-basis: 66.6666666667%; }
-  main .small-9 {
-    flex-basis: 75%; }
-  main .small-10 {
-    flex-basis: 83.3333333333%; }
-  main .small-11 {
-    flex-basis: 91.6666666667%; }
-  main .small-12 {
-    flex-basis: 100%; }
-  main .attorney-card {
-    background-color: aqua;
-    text-align: center; }
-  main figure {
-    margin: 0; }
-  main button {
-    background-color: blue;
-    color: white;
-    border: none;
-    height: 2rem;
-    margin: 1rem;
-    border-radius: 6px; }
-  main .action-button {
-    background-color: aqua;
-    text-align: center;
-    padding: 1vw; }
-  main .blog-card {
-    background-color: aqua; }
-  main .img-fluid {
-    max-width: 100%;
-    height: auto; }
-  main .faq {
-    background-color: aqua; }
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white; }
+
+form input.submitBtn {
+  border: none;
+  background-color: #9c2c13;
+  color: white;
+  border-radius: 1rem;
+  padding: .75rem 1.5rem;
+  margin: 0 0 2rem 2%;
+  width: 96%;
+  max-width: 20rem; }
+
+form label.top input:required {
+  border-left: red solid 6px; }
+
+form label.top input:required:valid {
+  border-left: green solid 6px; }
 
 footer {
   background-color: #17a8e4;
-  padding: 1rem 0.5vw;
-  display: flex; }
-
-footer a {
-  flex-basis: 25%;
   text-align: center;
-  color: white;
-  font-size: 3rem; }
-
-footer a:hover {
-  color: blue; }
+  font-family: Verdana, sans-serif; }
 
 /*----- Clearfix: Force an Element not to collapse -----*/
 .clearfix:after {
@@ -549,88 +567,187 @@ footer a:hover {
   display: table;
   clear: both; }
 
-@media only screen and (min-width: 560px) {
-  nav li {
-    width: 25%;
-    float: left; }
+#hamburgerBtn {
+  display: none; }
 
-  main .medium-0 {
-    flex-basis: 0%; }
-  main .medium-1 {
-    flex-basis: 8.3333333333%; }
-  main .medium-2 {
-    flex-basis: 16.6666666667%; }
-  main .medium-3 {
-    flex-basis: 25%; }
-  main .medium-4 {
-    flex-basis: 33.3333333333%; }
-  main .medium-5 {
-    flex-basis: 41.6666666667%; }
-  main .medium-6 {
-    flex-basis: 50%; }
-  main .medium-7 {
-    flex-basis: 58.3333333333%; }
-  main .medium-8 {
-    flex-basis: 66.6666666667%; }
-  main .medium-9 {
-    flex-basis: 75%; }
-  main .medium-10 {
-    flex-basis: 83.3333333333%; }
-  main .medium-11 {
-    flex-basis: 91.6666666667%; }
-  main .medium-12 {
-    flex-basis: 100%; } }
+/* hide the navigation button by default */
+#primaryNav li.current-menu-item a {
+  background-color: rgba(0, 0, 0, 0.2); }
+
+#primaryNav li.current-menu-parent {
+  background-color: rgba(0, 0, 0, 0.2); }
+
+@media only screen and (max-width: 34.9375em) {
+  /* Navigation Button  -------------------------------------------------------- */
+  body {
+    padding-top: 44px; }
+
+  nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 44px;
+    background-color: #111;
+    /* change the menu color */
+    z-index: 99; }
+
+  #hamburgerBtn {
+    background: none;
+    border: none;
+    display: inline-block;
+    position: relative;
+    height: 44px;
+    width: 44px;
+    cursor: pointer; }
+    #hamburgerBtn .line {
+      position: absolute;
+      height: 2px;
+      width: 60%;
+      background: white;
+      border-radius: 2px;
+      transition: all cubic-bezier(0.2, 0.1, 0.2, 1.2) 0.3s; }
+    #hamburgerBtn .top, #hamburgerBtn .middle, #hamburgerBtn .bottom {
+      left: 20%; }
+    #hamburgerBtn .top {
+      top: 29%; }
+    #hamburgerBtn .middle {
+      top: 48%; }
+    #hamburgerBtn .bottom {
+      top: 67%; }
+
+  #hamburgerBtn.open .top {
+    transform: rotate(45deg);
+    top: 48%; }
+  #hamburgerBtn.open .middle, #hamburgerBtn.open .bottom {
+    transform: rotate(-45deg);
+    top: 48%; }
+
+  /* Navigation Bar -------------------------------------------------------- */
+  #primaryNav {
+    height: 0;
+    overflow: hidden;
+    width: 20rem;
+    background-color: #111;
+    /* change the menu color */
+    margin: 0;
+    padding: 0;
+    z-index: 998;
+    font-family: Verdana;
+    font-weight: normal; }
+
+  #primaryNav li a {
+    display: block;
+    width: 100%;
+    padding: .75rem 2%;
+    font-size: 1rem;
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.15);
+    color: white;
+    text-decoration: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.2); }
+
+  #primaryNav li a:hover {
+    background-color: rgba(0, 0, 0, 0.5); }
+
+  /* Toggle the navigation bar to expand down  */
+  #primaryNav.open {
+    height: auto; }
+
+  /* Submenus – optional ."menu-item-has-children" class indicates dropdowns */
+  #primaryNav > li:hover > a {
+    background: rgba(0, 0, 0, 0.5); }
+
+  #primaryNav li.menu-item-has-children > a:after {
+    font-size: .75rem;
+    content: "\25BC";
+    color: rgba(255, 255, 255, 0.5);
+    float: right; }
+
+  #primaryNav li.menu-item-has-children ul li {
+    background-color: #111; }
+
+  #primaryNav li.menu-item-has-children > a:hover {
+    background: rgba(0, 0, 0, 0.75); }
+
+  /*hide the sub menu items by default*/
+  #primaryNav li ul {
+    display: none;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 0; }
+
+  #primaryNav li ul a {
+    border-top: solid 1px rgba(0, 0, 0, 0.2);
+    font-size: 12px;
+    padding: 10px 5%;
+    font-weight: normal; }
+
+  #primaryNav li:hover ul {
+    display: block; } }
+/* End Mobile Styles */
+@media only screen and (min-width: 560px) {
+  /* 35em is also 560px when basefont is 16px */ }
+@media only screen and (min-width: 560px) and (min-width: 35rem) {
+  nav {
+    background-color: #111; }
+    nav ul {
+      margin-left: 2%; }
+    nav ul li {
+      float: left;
+      width: auto; }
+    nav ul li a {
+      display: block;
+      border: none;
+      width: 100%;
+      background: none;
+      font-size: .9rem;
+      padding: .9rem 1.2rem;
+      color: white;
+      text-decoration: none;
+      /*transition*/
+      -webkit-transition: background 0.3s linear;
+      transition: background 0.3s linear; }
+    nav ul li a:hover {
+      background: #040404; }
+    nav #primaryNav li.menu-item-has-children > a:after {
+      font-size: .75rem;
+      content: "\00A0\00A0\25BC";
+      color: rgba(255, 255, 255, 0.5); }
+    nav ul li ul {
+      /*rules for the sub menu items*/
+      z-index: 99;
+      position: absolute;
+      background-color: #2b2b2b;
+      left: -999rem;
+      /* pushes the menu way off to the side */
+      width: 10rem; }
+    nav ul li ul li {
+      /* overides the float and line from the parent ul */
+      float: none;
+      border-right: none;
+      border-top: solid 1px rgba(0, 0, 0, 0.2); }
+    nav ul li:hover ul {
+      /* this displays the menus as drop downs  */
+      left: auto;
+      margin-left: 0; }
+
+  div.cards {
+    column-count: 2; } }
+@media only screen and (min-width: 560px) {
+  /*end medium */ }
 /* end of media query */
 @media only screen and (min-width: 1028px) {
-  header, nav, main, footer {
-    max-width: 1200px;
-    margin: auto; }
-
-  nav ul {
-    padding-left: 0.5vw; }
-
-  nav li {
-    width: auto; }
-
-  nav a {
-    padding: .5rem 1rem; }
-
-  nav ul li {
-    width: auto; }
-
-  nav ul li:first-child a {
-    border-left: 1px solid #777; }
-
-  nav ul li:last-child a {
-    border-right: 1px solid #777; }
+  /* 64em is also 1028px when basefont is 16px */ }
+@media only screen and (min-width: 1028px) and (min-width: 64rem) {
+  body {
+    max-width: 64rem; }
 
   nav ul li a {
-    padding: .5rem 1rem; }
+    padding: .6rem 1rem; }
 
-  main .large-0 {
-    flex-basis: 0%; }
-  main .large-1 {
-    flex-basis: 8.3333333333%; }
-  main .large-2 {
-    flex-basis: 16.6666666667%; }
-  main .large-3 {
-    flex-basis: 25%; }
-  main .large-4 {
-    flex-basis: 33.3333333333%; }
-  main .large-5 {
-    flex-basis: 41.6666666667%; }
-  main .large-6 {
-    flex-basis: 50%; }
-  main .large-7 {
-    flex-basis: 58.3333333333%; }
-  main .large-8 {
-    flex-basis: 66.6666666667%; }
-  main .large-9 {
-    flex-basis: 75%; }
-  main .large-10 {
-    flex-basis: 83.3333333333%; }
-  main .large-11 {
-    flex-basis: 91.6666666667%; }
-  main .large-12 {
-    flex-basis: 100%; } }
+  main {
+    margin: auto; } }
+@media only screen and (min-width: 1028px) {
+  /*end large */ }
 /* end of media query */
+
+/*# sourceMappingURL=styles.css.map */

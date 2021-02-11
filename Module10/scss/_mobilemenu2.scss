@@ -1,0 +1,115 @@
+#hamburgerBtn { display: none; } /* hide the navigation button by default */
+#primaryNav li.current-menu-item a{background-color:rgba(0,0,0,0.2);}
+#primaryNav li.current-menu-parent {background-color: rgba(0,0,0,0.20);}
+
+
+@media only screen and (max-width: 34.9375em) {
+
+/* Navigation Button  -------------------------------------------------------- */
+    body { padding-top: 44px; }
+    
+      
+    
+    nav {
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 100%;
+        height: 44px;
+        background-color: $menuColor; /* change the menu color */
+		z-index: 99;
+    }
+
+#hamburgerBtn {
+    background: none;
+    border: none;
+	display:inline-block;
+	position: relative;
+  	height: 44px;
+    width: 44px;
+	cursor:pointer;
+    .line {
+        position: absolute;
+        height: 2px;
+        width:60%;
+        background:white;
+        border-radius:2px;
+        transition: all cubic-bezier(0.2, 0.1, 0.2, 1.2) 0.3s;
+    }
+    .top, .middle, .bottom {left: 20%;}
+    .top {top:29%;}
+    .middle {top:48%;}
+    .bottom {top:67%;}
+    
+
+    } // end hamburger
+	
+	#hamburgerBtn.open {
+    .top {
+        transform:rotate(45deg);
+        top:48%;
+    }// end top
+    .middle, .bottom {
+        transform:rotate(-45deg);
+        top:48%;
+    }// end bottom
+	}// end open
+
+/* Navigation Bar -------------------------------------------------------- */
+
+	
+	#primaryNav {
+        height: 0;
+        overflow: hidden;
+		width: 20rem;
+		background-color: $menuColor; /* change the menu color */
+		margin: 0;
+		padding: 0;
+		z-index: 998;
+        font-family: Verdana;
+        font-weight: normal;
+	}
+    
+	#primaryNav li a {
+		display: block;
+		width: 100%;
+		padding: .75rem 2%;
+		font-size: 1rem;
+		text-shadow: -1px -1px 0 rgba(0,0,0,.15);
+		color: white;
+		text-decoration: none;
+		border-top: 1px solid rgba(0,0,0,.2);
+	}
+	#primaryNav li a:hover {
+		background-color: rgba(0,0,0,.5);
+	}
+
+	/* Toggle the navigation bar to expand down  */
+	#primaryNav.open {height: auto;}
+
+	/* Submenus – optional ."menu-item-has-children" class indicates dropdowns */
+	#primaryNav > li:hover > a {background: rgba(0,0,0,.5);}
+	#primaryNav li.menu-item-has-children > a:after {
+        font-size: .75rem;
+		content: "\25BC";
+		color: rgba(255,255,255,.5);
+		float: right;
+	}
+	#primaryNav li.menu-item-has-children ul li {background-color: $menuColor;}
+	#primaryNav li.menu-item-has-children > a:hover {
+		background: rgba(0,0,0,.75);
+	}
+    /*hide the sub menu items by default*/
+	#primaryNav li ul {
+		display: none;
+		background: rgba(0,0,0,.3);
+		padding: 0;
+	}
+	#primaryNav li ul a {
+		border-top: solid 1px rgba(0,0,0,0.2);
+		font-size: 12px;
+		padding: 10px 5%;
+		font-weight: normal;
+	}
+	#primaryNav li:hover ul {display: block;}
+} /* End Mobile Styles */

@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="Fill Me In">
+<meta name="author" content="John Doe">
+
+<!-- This start file was build by Paul Cheney  -->
+<title>Swag Shop B-)</title>
+
+<!-- TELLS PHONES NOT TO LIE ABOUT THEIR WIDTH & stops the font from enlarging when a phone is turned sideways-->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+
+<!-- STYLE SHEETS -->
+<link href="css/styles.css" rel="stylesheet">
+
+
+
+     
+</head>
+<body>
+<!-- HEADER HERE -->
+<header>
+    <img src="/Module10/images/logo.png" alt="logo">
+    <h1>Swag Shop</h1>
+    <h2>Swanky Gear For all Your Needs!</h2>
+</header>
+
+<!-- NAVIGATION HERE -->
+    <nav class="clearfix">
+        <button id="hamburgerBtn">
+            <span class="line top"></span>
+            <span class="line middle"></span>
+            <span class="line bottom"></span>
+        </button>
+
+        <ul id="primaryNav">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Deals</a></li>
+            <li class="active menu-item-has-children"><a href="#">Order</a>
+                <ul>
+                    <li><a href="#">Water Bottles</a></li>
+                    <li><a href="#">Hats</a></li>
+                    <li><a href="#">Shirts</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Customer Reviews</a></li>
+        </ul>
+    </nav>
+    
+    
+<!-- CONTENT HERE -->
+<main>
+    <h1>Course Proposal Application</h1>
+    <form method="get" action="thanks.html">
+        <fieldset>
+            <legend>Customer Information</legend>
+            <label class="top">Full Name*<input type="text" name="fname" required></label>
+            <label class="top">Phone*<input type="text" name="phone" placeholder="1234567890" required></label>
+            <label class="top">Email<input type="text" name="email" placeholder="someone@gmail.com"></label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Swag Information</legend>
+            <label class="top">Date Needed<input type="date" name="date" placeholder="July 4 2021"></label>
+            <label class="top">Business Name<input type="text" name="bname" placeholder="Swiggity Sons Co."></label>
+            <label class="top">Business URL<input type="url" name="url" placeholder="http://">
+            <label class="top">Color
+                <select name="color">
+                    <option value="">Please Select &#9662;</option>
+                    <option value="blue">Blue</option>
+                    <option value="gold">Gold</option>
+                    <option value="green">Green</option>
+                    <option value="red">Red</option>
+                    <option value="silver">Silver</option>
+                    <option value="yellow">Yellow</option>
+                </select>
+            </label>
+            <label class="top">Quantity</label><input type="number" name="qty" placeholder="21">
+            <div>Material</div>
+            <label class="container"><input type="radio" name="material" value="Aluminum">Aluminum<span class="checkmark"></span></label>
+            <label class="container"><input type="radio" name="material" value="Plastic">Plastic<span class="checkmark"></span></label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Payment Information</legend>
+            <label class="top">Name on Card*><input type="text" name="cname" required></label>
+            <label class="top">Card Number*<input type="number" name="cnumber" required></label>
+            <label class="top">Expiration Date*<input type="date" name="cdate" required></label>
+        </fieldset>
+
+        <input class="submitBtn" type="submit" value="Get My Swag">
+    </form>
+</main>
+
+<!-- FOOTER HERE -->   
+    <footer>
+        &copy; 2021 &bull; Tanner Black &bull; 123-555-6789
+    </footer>
+<script src="js/scripts.js"></script>
+</body>
+</html>
