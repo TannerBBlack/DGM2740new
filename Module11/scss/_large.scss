@@ -1,0 +1,33 @@
+div#pageWrapper {
+        grid-template-areas:
+        "header"
+        "navigation"
+        "content"
+        "footer";
+        grid-template-columns: auto;
+        margin: auto;
+}
+
+/*----------- BODY --------------*/
+
+
+
+/*----------- HEADER --------------*/
+
+
+
+/*----------- NAVIGATION --------------*/
+nav ul li {
+        flex-basis: auto;
+        a {padding: .6rem 1rem;}
+}
+
+
+/*----------- MAIN --------------*/
+
+main {
+        margin: 0 15rem 0 15rem;
+}
+
+/*----------- FOOTER --------------*/
+    

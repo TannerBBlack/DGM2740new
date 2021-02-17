@@ -1,0 +1,42 @@
+div#pageWrapper {
+    grid-template-areas:
+    "header header"
+    "navigation content"
+    "footer footer";
+    grid-template-columns: 150px auto;
+}
+
+
+/*----------- BODY --------------*/
+
+
+
+/*----------- HEADER --------------*/
+
+header {
+    h1 { font-size: 4rem; margin-bottom: 1rem;}
+}
+
+/*----------- NAVIGATION --------------*/
+a.myjump {display: none;}
+nav {height: auto;}
+
+
+/*----------- MAIN --------------*/
+
+main figure.right {
+    float: right; 
+    width: 30%; 
+    margin-left: 2rem;
+    padding-bottom: .5rem;
+}
+
+main figure.left {
+    float: left; 
+    width: 30%; 
+    margin-right: 2rem;
+    padding-bottom: .5rem;
+}
+
+/*----------- FOOTER --------------*/
+    
