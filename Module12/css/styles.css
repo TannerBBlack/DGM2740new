@@ -322,7 +322,8 @@ body {
 /*----------- HEADER --------------*/
 header {
   padding: .5rem 2%;
-  background-color: #ddd; }
+  background-color: #17a8e4;
+  color: whitesmoke; }
 
 header h1 {
   margin: 0; }
@@ -333,30 +334,31 @@ header h2 {
 
 /*----------- NAVIGATION --------------*/
 nav {
-  background-color: #666;
   position: fixed;
   bottom: 0;
   width: 100%;
   z-index: 999;
   background-color: #17a8e4; }
-
-nav ul {
-  display: flex; }
-
-nav ul li {
-  display: block;
-  width: 100%;
-  text-transform: uppercase; }
-
-nav ul li a {
-  display: block;
-  background-color: #444;
-  color: #eee;
-  border-left: 1px solid #777;
-  padding: .5rem 0;
-  text-decoration: none;
-  font-size: .9rem;
-  text-align: center; }
+  nav ul {
+    display: flex;
+    padding: 0; }
+    nav ul li {
+      display: block;
+      width: 100%;
+      flex-basis: 33.3%; }
+      nav ul li a {
+        display: block;
+        color: #eee;
+        border-left: 1px solid #777;
+        padding: .5rem 0;
+        text-decoration: none;
+        font-size: .9rem;
+        text-align: center;
+        width: 100%;
+        text-transform: uppercase; }
+        nav ul li a ion-icon {
+          width: 100%;
+          font-size: 1.5rem; }
 
 nav ul li:first-child a {
   border-left: none; }
@@ -366,7 +368,7 @@ nav ul li a:hover {
   color: #333; }
 
 nav ul li.active a {
-  background-color: #000;
+  background-color: #1488b9;
   color: #fff; }
 
 /*----------- MAIN --------------*/
@@ -374,31 +376,39 @@ main {
   padding: 0 2%;
   min-height: 10rem; }
 
-div#inventoryWrapper {
+div#myCards {
   display: grid;
   grid-template-columns: 1fr; }
 
 figure {
-  position: relative; }
+  position: relative;
+  margin: 0;
+  width: 100%; }
+  figure img {
+    width: 100%; }
+  figure figcaption {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    padding: .3rem .2vh; }
 
-figcaption {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
-  color: white;
-  padding: .3rem .2vh; }
+section {
+  margin: 2%;
+  background-color: #76c2e6; }
 
-div {
+section div {
   display: grid;
   grid-template-columns: 1fr 1fr; }
 
-div below span i {
+span ion-icon {
+  font-size: 1.6rem;
   float: left;
-  font-size: 1.5rem; }
+  margin-top: 1em; }
 
-div below span p {
-  padding-left: 1.6rem; }
+span p {
+  padding-left: 1.8rem; }
 
 /*----------- FOOTER --------------*/
 footer {
@@ -416,33 +426,16 @@ footer {
   /*----------- BODY --------------*/
   /*----------- HEADER --------------*/
   /*----------- NAVIGATION --------------*/
-  nav ul {
-    margin-left: 2%; }
-
-  nav ul li {
-    width: auto; }
-
-  nav ul li:first-child a {
-    border-left: 1px solid #777; }
-
-  nav ul li:last-child a {
-    border-right: 1px solid #777; }
-
-  nav ul li a {
-    padding: .5rem 1rem; }
-
   /*----------- MAIN --------------*/
-  div#inventoryWrapper {
+  div#myCards {
     display: grid;
-    grid-template-columns: 1fr 1fr; }
+    grid-template-columns: 1fr 1fr;
+    max-width: 65em;
+    margin: auto; }
 
   /*----------- FOOTER --------------*/ }
 /* end of media query */
 @media only screen and (min-width: 64rem) {
-  header, nav, main, footer {
-    max-width: 64rem;
-    margin: auto; }
-
   /*----------- BODY --------------*/
   /*----------- HEADER --------------*/
   /*----------- NAVIGATION --------------*/
