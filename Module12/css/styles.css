@@ -412,9 +412,10 @@ span p {
 
 /*----------- FOOTER --------------*/
 footer {
-  background-color: #ddd;
   padding: .5rem 2%;
-  text-align: center; }
+  text-align: center;
+  min-height: 6em;
+  color: white; }
 
 /*----- Clearfix: Force an Element not to collapse -----*/
 .clearfix:after {
