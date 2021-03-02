@@ -337,6 +337,15 @@ div#puppy div {
     color: #0b0d0e; }
 
 /*----------- HEADER --------------*/
+header {
+  margin-top: 0;
+  background-color: #a067d4;
+  min-height: 5rem;
+  padding: 10px;
+  color: #ffebeb; }
+  header h1 {
+    margin: 0; }
+
 /*----------- NAVIGATION --------------*/
 /*----------- FOOTER --------------*/
 /*----- Clearfix: Force an Element not to collapse -----*/
