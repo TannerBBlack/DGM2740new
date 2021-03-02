@@ -1,0 +1,51 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+
+/*----------- BODY --------------*/
+body {
+    font-size: 16px;
+    font-family: Verdana, sans-serif;
+    text-align: center;
+}
+
+div#puppy {
+    display: grid;
+    grid-template-columns: 1 fr;
+    justify-content: center;
+}
+
+div#puppy div {
+    background-color: rgb(159, 159, 255);
+    margin: 1rem;
+    max-width: 20rem;
+    padding: 1rem;
+    p {
+        font-weight: bold;
+    }
+    span {
+        font-weight: bolder;
+        color: rgb(11, 13, 14);
+    }
+}
+
+/*----------- HEADER --------------*/
+
+
+/*----------- NAVIGATION --------------*/
+
+
+/*----------- FOOTER --------------*/
+
+
+
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
