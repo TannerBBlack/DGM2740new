@@ -1,0 +1,197 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+/* body rules */
+html, body {
+    overflow-x: hidden;
+}
+
+body {
+    font-family: $fontFamily;
+    font-weight: $regularWeight;
+    font-size: 16px;
+    background-color: rgb(253, 250, 245);
+} 
+
+header {
+    padding: 1rem $gutter;
+    h1 {
+        margin: 0; 
+        font-size: 2rem;
+        font-weight: $heavyWeight;
+    } // end of h1
+    h2{
+        margin: 0; 
+        font-size: 1.2rem; 
+        font-weight: $regularWeight;
+    } // end of h2
+    img {
+        float: left;
+        padding-right: 10px;
+    } // end of img
+    border-bottom: 1px solid grey;
+} // end of header
+
+nav {
+    ul {margin:0; 
+        padding: 0;
+        list-style-type: none;
+        li { 
+            width: 25%; 
+            float: right;
+        }
+    }
+    
+    li.active {background-color: #333}
+    a {
+        display: block;
+        padding: .8rem 0; /*44px min*/
+        color: rgb(145, 145, 145);
+        text-align: center;
+        text-decoration: none;
+    } // end of a tag
+    a:hover {background-color: #444;}
+} // end of nav
+
+.hero-image img {
+    display: block;
+    height: 100%;
+    max-width: 65rem;
+    margin: 10px auto;
+}
+div.success {
+    padding: 10px;
+    color: white;
+    background-color: black;
+    h2 {color: yellow;}
+    max-width: 65rem;
+    margin: auto;
+}
+.success-wrapper {background-color: black;}
+
+main {
+    display: block;
+    padding: 10px;
+
+    //SASS LOOP FOR COLUMNS
+    div.flexed {display: flex; 
+        flex-wrap: wrap; 
+        padding: 0;
+        padding-top: 10px; 
+        border-bottom: 1px solid grey; 
+        border-top: 1px solid grey;
+        margin:10px 0;
+    }
+
+    .column {padding: 0 $gutter;}
+
+    @for $i from 0 through 12 {
+            $w:($i / 12) * 100%;
+            .small-#{$i} {flex-basis: $w;}	
+    } // end loop
+
+    h2, h3 {color: $primaryColor;}
+
+    figure {
+        margin: 0;
+    }
+
+    .myButton {
+        box-shadow: 0px 10px 14px -7px #276873;
+        background:linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+        background-color:#599bb3;
+        border-radius:8px;
+        display:inline-block;
+        cursor:pointer;
+        color:#ffffff;
+        font-family:Arial;
+        font-size:20px;
+        font-weight:bold;
+        padding:13px 32px;
+        text-decoration:none;
+        text-shadow:0px 1px 0px #3d768a;
+    }
+    .myButton:hover {
+        background:linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+        background-color:#408c99;
+    }
+    .myButton:active {
+        position:relative;
+        top:1px;
+    }
+
+    .action-button {
+        text-align: center;
+        padding: $gutter * 2;
+    }
+
+    // .blog-card {
+    //     background-color: aqua;
+    // }
+
+    .img-fluid {
+        max-width: 100%;
+        height: auto;
+    }
+
+    // .faq {
+
+    // }
+
+    .right-align {
+        text-align: right;
+    }
+
+    .short {grid-area: short; }
+    .wide {grid-area: wide;}
+    .tall {grid-area: tall; background-color: white; text-align: center;}
+
+    #bottom-grid {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-template-areas:
+        "short"
+        "wide"
+        "tall";
+    }
+
+    .companies {
+        display: grid;
+        img {max-height: 38px; margin: 10px auto;}
+    }
+}// end of main
+
+
+footer {
+    background-image: linear-gradient($primaryColor, rgb(48, 48, 75));
+    padding: 1rem $gutter;
+    display: flex;
+    color: white;
+}
+
+.full-width-footer {
+    background-image: linear-gradient($primaryColor, rgb(48, 48, 75));
+}
+
+footer a {
+flex-basis: 25%;
+text-align: center;
+color: white;
+font-size: 3rem;
+}
+
+footer a:hover {
+color: blue;
+}
+
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}

@@ -1,0 +1,22 @@
+
+ 
+ nav li {width: 25%; float: left;}
+    
+ div.success {
+    display: flex;
+    flex-basis: space-between;
+    color: white;
+    background-color: black;
+    h2 {color: yellow;}
+    max-width: 65rem;
+    margin: auto;
+}
+main {
+    
+    @for $i from 0 through 12 {
+        $w:($i / 12) * 100%;
+        .medium-#{$i} {flex-basis: $w;}	
+    } // end loop
+
+    
+}
