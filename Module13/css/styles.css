@@ -328,7 +328,6 @@ div#puppy {
 div#puppy div {
   background-color: #9f9fff;
   margin: 1rem;
-  max-width: 20rem;
   padding: 1rem; }
   div#puppy div p {
     font-weight: bold; }
