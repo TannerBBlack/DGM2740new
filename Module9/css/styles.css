@@ -404,7 +404,8 @@ html {
 header {
   background-image: url(/Module9/images/header.jpg);
   color: white;
-  font-family: Verdana, sans-serif; }
+  font-family: Verdana, sans-serif;
+  padding-top: 2rem; }
   header h1 {
     margin: 5px;
     margin-top: 0; }
@@ -412,7 +413,7 @@ header {
     margin: 5px;
     margin-bottom: 0; }
   header #scrim {
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.1);
     height: 100%; }
 
 body {
@@ -500,7 +501,8 @@ div a:hover {
 footer {
   background-color: #17a8e4;
   text-align: center;
-  font-family: Verdana, sans-serif; }
+  font-family: Verdana, sans-serif;
+  padding: .8rem; }
 
 /*----- Clearfix: Force an Element not to collapse -----*/
 .clearfix:after {

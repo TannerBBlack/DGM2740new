@@ -16,10 +16,11 @@ header {
         margin-bottom: 0;
     }
     #scrim {
-        background-color: rgba(0, 0, 0, 0.2);
+        background-color: rgba(0, 0, 0, 0.1);
         height: 100%;
     }
     font-family: Verdana, sans-serif;
+    padding-top: 2rem;
 }
 
 body {
@@ -123,6 +124,7 @@ footer {
     background-color: $primaryColor;
     text-align: center;
     font-family: Verdana, sans-serif;
+    padding: .8rem;
 }
 
 /*----- Clearfix: Force an Element not to collapse -----*/
